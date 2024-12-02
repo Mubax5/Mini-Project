@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        .menu{
+            position: fixed;
+            left: -300px;
+            width: 300px;
+            height: 100%;
+            background-color: aqua;
+            transition: all .5s ease;
+        }
+        .menu header{
+            font-size: 22px;
+            color: white;
+            text-align: center;
+            line-height: 70px;
+            background: rgb(77, 15, 202);
+            user-select: none;
+        }
+        .menu ul a{
+            display: block;
+            height: 100%;
+            width: 100%;
+            line-height: 65px;
+            font-size: 20px;
+            color: white;
+            padding-left: 40px;
+            box-sizing: border-box;
+            border-top: 1px solid rgba(255, 255, 255, .1);
+            border-bottom: 1px solid black;
+        }
+        ul li:hover a{
+            padding-left: 50px;
+        }
+        .menu ul a i{
+            margin-right: 16px;
+        }
+        #check{
+            display: none; 
+        }
+        label #button, label #batal{
+            position: absolute;
+            cursor: pointer;
+            background: pink;
+            border-radius: 3px;
+        }
+        label #button {
+            left: 10px;
+           
+            font-size: 35px;
+            color: rgb(241, 240, 240);
+            padding: 6px 12px;
+            transition: all .5s;
+        }
+        label #batal{
+            z-index: 1111;
+            left: -195px;
+            top: 18px;
+            font-size: 30px;
+            color: blueviolet;
+            padding: 4px 9px;
+            transition: all .5s ease;
+        }
+        #check:checked ~ .menu{
+            left: 0;
+        }
+        #check:checked ~ label #batal{
+            left: 250px;
+        }
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        nav h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ddd;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .search-container {
+            
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .search-container label {
+            margin-right: 10px;
+        }
+
+        .search-container input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+           
+
+        }
+
+        .button-container {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .search-btn {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        .delete-btn {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .show-all-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        .item-list {
+            margin-top: 20px;
+        }
+
+        .item-card {
+            background-color: white;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 175px;
+
+        }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <input type="checkbox" id ="check">
+    <label for="check">
+        <i class="fas fa-bars" id="button"></i>
+        <i class="fas fa-times" id="batal"></i>
+    </label>
+    <div class="menu">
+    <header>Menu Pilihan</header>
+    <ul>
+        <li><a href="#">Pembuatan DataBase</a></li>
+        <li><a href="menambahdata.html">Menambahkan data barang</a></li>
+        <li><a href="ubah&hapusbarang.html">Mengubah data barang</a></li>
+        <li><a href="ubah&hapusbarang.html">Menghapus data barang</a></li>
+        <li><a href="cari&daftarbarang.html">Mencari data barang</a></li>
+        <li><a href="cari&daftarbarang.html">Seluruh data barang</a></li>
+        <li><a href="halaman.html">Kembali</a></li>
+    </ul>
+    </div>
+    <header>
+        <nav>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pengelolaan Barang</h1>
+            <ul>
+                <li><a href="#">LOGOUT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    
+        <section class="button-container">
+            <h3>Menambah Data Barang</h3><br>
+          <label>Nama Barang</label><br>
+            <input type="text" id="search" ><br><br>
+           
+          <label>Kode Barang</label><br>
+            <input type="text" id="search" ><br><br>
+            
+          <label>Harga Barang</label><br>
+            <input type="text" id="search" ><br><br>
+           
+          <label>Stok Barang</label><br>
+            <input type="text" id="search" ><br><br>
+
+           
+            <button class="btn show-all-btn">Tambah Barang</button><br><br>
+
+        </section><hr><br>
+    </main>
+    <footer>
+        <p>&copy; 2024 Pengelolaan Barang.</p>
+    </footer>
+    
+</body>
+</html>

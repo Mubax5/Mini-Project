@@ -1,3 +1,0 @@
-# Mini Project
-
-Project ALPRO

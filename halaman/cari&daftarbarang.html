@@ -17,15 +17,15 @@
             left: -300px;
             width: 300px;
             height: 100%;
-            background-color: aqua;
+            background-color: #ffdd1f;
             transition: all .5s ease;
         }
         .menu header{
             font-size: 22px;
-            color: white;
+            color: rgb(7, 7, 7);
             text-align: center;
             line-height: 70px;
-            background: rgb(77, 15, 202);
+            background: #eacb1c;
             user-select: none;
         }
         .menu ul a{
@@ -34,7 +34,7 @@
             width: 100%;
             line-height: 65px;
             font-size: 20px;
-            color: white;
+            color: rgb(11, 11, 11);
             padding-left: 40px;
             box-sizing: border-box;
             border-top: 1px solid rgba(255, 255, 255, .1);
@@ -49,10 +49,16 @@
         #check{
             display: none; 
         }
-        label #button, label #batal{
+        label #button{
             position: absolute;
             cursor: pointer;
-            background: pink;
+            background:rgb(3, 3, 3);
+            border-radius: 3px;
+        }
+        label #batal{
+            position: absolute;
+            cursor: pointer;
+            background:rgb(203, 171, 9);
             border-radius: 3px;
         }
         label #button {
@@ -68,7 +74,7 @@
             left: -195px;
             top: 18px;
             font-size: 30px;
-            color: blueviolet;
+            color: rgb(6, 6, 6);
             padding: 4px 9px;
             transition: all .5s ease;
         }
@@ -86,11 +92,11 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(white, yellow);
         }
 
         header {
-            background-color: #4CAF50;
+            background-color: #101010;
             color: white;
             padding: 10px 0;
         }
@@ -105,53 +111,43 @@
         nav h1 {
             margin: 0;
         }
-
         nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
             display: flex;
         }
-
         nav ul li {
             margin-left: 20px;
         }
-
         nav ul li a {
             color: white;
             text-decoration: none;
             transition: color 0.3s;
         }
-
         nav ul li a:hover {
             color: #ddd;
         }
-
         main {
             padding: 20px;
         }
-
-        .search-container {
+        .cari {
             display: flex;
             align-items: center;
             margin-bottom: 20px;
         }
-
-        .search-container label {
+        .cari label {
             margin-right: 10px;
         }
-
-        .search-container input {
+        .cari input {
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
             flex: 1;
         }
-
-        .button-container {
+        .tombol {
             margin-bottom: 20px;
         }
-
         .btn {
             padding: 10px 15px;
             border: none;
@@ -160,50 +156,62 @@
             margin-right: 10px;
             transition: background-color 0.3s;
         }
-
         .search-btn {
-            background-color: #2196F3;
+            background-color: #df9011;
             color: white;
         }
-
-        .delete-btn {
+        .hapus {
             background-color: #f44336;
             color: white;
         }
-
         .show-all-btn {
-            background-color: #4CAF50;
+            background-color: #df9011;
             color: white;
         }
-
         .btn:hover {
             opacity: 0.8;
         }
-
-        .item-list {
-            margin-top: 20px;
-        }
-
-        .item-card {
-            background-color: white;
-            padding: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
         footer {
-            background-color: #4CAF50;
-            color: white;
+            background-color: #0a0a09;
+            color: rgb(251, 246, 246);
             text-align: center;
             padding: 10px 0;
             margin-top: 320px;
 
+        } 
+        table {
+            width: 100%;
+            border-collapse: collapse; 
+            margin-bottom: 10px;
         }
-    </style>
+        thead th {
+            background-color: #df9011;
+            color: white;
+            padding: 10px;
+            text-align: left;
+            border-bottom: 2px solid #ddd;
+        }
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            background: white;
+        }
+        th, td {
+            text-align: left;
+        }
+        .hapus {
+            background-color: #e74c3c; 
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .hapus:hover {
+            background-color: #c0392b; 
+        }
+ </style>
+ 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 </head>
@@ -218,8 +226,8 @@
     <ul>
         <li><a href="#">Pembuatan DataBase</a></li>
         <li><a href="menambahdata.html">Menambahkan data barang</a></li>
-        <li><a href="ubah&hapusbarang.html">Mengubah data barang</a></li>
-        <li><a href="ubah&hapusbarang.html">Menghapus data barang</a></li>
+        <li><a href="ubahbarang.html">Mengubah data barang</a></li>
+        <li><a href="cari&daftarbarang.html">Menghapus data barang</a></li>
         <li><a href="cari&daftarbarang.html">Mencari data barang</a></li>
         <li><a href="cari&daftarbarang.html">Seluruh data barang</a></li>
         <li><a href="halaman.html">Kembali</a></li>
@@ -233,19 +241,45 @@
             </ul>
         </nav>
     </header>
+        <main>
+            <section id="search" class="cari">
+                <label for="search">Cari Barang:</label>
+                <input type="text" id="search" placeholder="Masukkan nama barang...">
+                <button class="btn search-btn">Cari</button>
+            </section>
+            <section class="tombol">
+                <button class="hapus">Hapus</button> &nbsp;&nbsp;
+                <button class="btn show-all-btn">Tampilkan Semua</button>
+            </section>
+      <h1>Daftar Barang</h1>
     <main>
-    <h3>Cari barang yang dibutuhkan</h3><br>
-        <section id="search" class="search-container">
-           
-            <label for="search">Cari Barang:</label>
-            <input type="text" id="search" placeholder="Masukkan nama barang...">
-            <button class="btn search-btn">Cari</button>
-        </section><hr><br>
-        <section class="button-container">
-            <h3>Tampilkan seluruh data barang</h3><br>
-            <button class="btn show-all-btn">Tampilkan Semua</button>
-        </section>
+      <section id="table">
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama Barang</th>
+              <th>Harga</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Barang A</td>
+              <td>Rp 50.000</td>
+              <td><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Barang B</td>
+              <td>Rp 100.000</td>
+              <td><button class="hapus">Hapus</button></td>
+            </tr>
+        </table>
+      </section>
     </main>
+
     <footer>
         <p>&copy; 2024 Pengelolaan Barang.</p>
     </footer>

@@ -1,0 +1,144 @@
+/* Style Index */
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: rgb(177, 52, 52);
+  color: #333;
+  background-color: #000000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  /* position: fixed; */
+  /* width: 100%; */
+  /* height: auto; */
+
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 5%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: #8371fd;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #ffffff;
+  min-height: auto;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+  border-radius: 50px;
+}
+
+.hero h1 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.hero .buttons button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.hero .buttons .btn-primary {
+  background-color: #8371fd;
+  color: #fff;
+}
+
+.hero .buttons .btn-primary:hover {
+  background-color: #5c4ebc;
+}
+
+.hero .buttons .btn-secondary {
+  background-color: #fff;
+  color: #8371fd;
+  border: 2px solid #8371fd;
+}
+
+.auth-buttons .btn-secondary {
+  background-color: #8371fd;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-buttons .btn-secondary:hover {
+  background-color: #5c4ebc;
+}
+
+.footer {
+  background-color: #f4f4f4; /* Warna latar footer */
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #333;
+  position: absolute; /* Tetap di bawah */
+  width: 100%; /* Full lebar */
+  bottom: 0; /* Fix posisi bawah */
+  border-top: 1px solid #ddd; /* Garis pembatas atas */
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

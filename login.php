@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Validasi login
     if (isset($users[$username]) && $users[$username] === $password) {
-        header("Location: homepagebarang/homepage.php");
+        header("Location: home.html ");
         exit(); 
     } else {
         echo "Login gagal. Username atau password salah.";
